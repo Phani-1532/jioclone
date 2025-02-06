@@ -4,6 +4,7 @@
     background-color: black;
     display: flex;
     justify-content: space-between;
+    padding: 0px 50px;
 } 
 
 /* Navigation Section Css */
@@ -18,12 +19,29 @@
 .logo{
     width: fit-content;
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
 }
 
+.logo img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.logo h1{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding: 0px 0px;
+}
+
+
 .premium{
+
     width: fit-content;
+
+
     border: 2px solid gold;
     padding: 5px 20px;
     border-radius: 20px;
@@ -38,7 +56,6 @@
 .search{
     width: 30%;
     height: 70px;
-    background-color:blue;
 }
 
 .navLinks{
@@ -52,7 +69,10 @@
 
 .navLink{
     padding: 21px 0px;
+    font-size: 17px;
+    cursor: pointer;
 }
+
 
 .navLink:first-child{
     border-bottom: 4px solid #d9008d;
@@ -63,42 +83,89 @@
 .search{
     width: 30%;  
     height: 70px;
-    background-color: blue;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 
 .searchBox{
-    width: 100%;
+    width: fit-content;
     height: 40px;
     border-radius: 18px;
-    background-color: grey;
+    background-color: rgb(50, 45, 45);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .searchIcon{
-   width: fit-content;
-   background-color: black;
-   border-radius: 50%;
-    height: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-left: 15px;
+    font-size: 18px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
+.searchIcon i{
+    font-size: 18px;
+}
 
 .micIcon{
     width: 20px;
     height: 20px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 15px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.micIcon i{
+    font-size: 18px;
+}
+
+.searchInput{
+    width: 250px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    padding-left: 6px;
+    font-size: 14px;
+    margin-left: 10px;
+    background-color: rgb(50, 45, 45);
+    margin-right: 10px;
+    color: white;
 }
 
 
-.searchInput{
-    width: 300px;
-    height: 25px;
+.searchInput::placeholder{
+    color: rgb(145, 136, 136);
+    font-size: 17px;
+}
 
+
+.profile{
+    width: 50px;
+
+    height: 50px;
+    background-color: rgb(240, 77, 213);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;  
+}
+
+.profile i{
+    font-size: 20px;
 }
