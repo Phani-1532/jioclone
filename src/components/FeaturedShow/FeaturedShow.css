@@ -1,0 +1,14 @@
+.featuredShow{
+    width: 22%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.featuredShow img{
+    width: 100%;
+    border-radius: 10px;
+}
