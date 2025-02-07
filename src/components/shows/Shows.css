@@ -1,17 +1,20 @@
-.featured{
+.shows{
     width: 100%;
     background-color: #060707;
-    padding: 10px 2%;
+    padding: 1px 2%; 
 }
 
-.featured-title{
+.shows-title{
     font-size: 30px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.showsFeatured{
+.showsParent{
     width: 100%;
     display: flex;
+    justify-content: space-between;
     gap: 10px;
 }
+
 

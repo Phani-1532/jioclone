@@ -1,0 +1,11 @@
+.showsChild{
+    width: 18%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.showsChild img{
+    width: 100%;
+    object-fit: cover;
+}
+
