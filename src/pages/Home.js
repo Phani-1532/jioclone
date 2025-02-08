@@ -20,6 +20,13 @@ function Home() {
   const [hindiMovies, setHindiMovies] = useState([])
   const [englishMovies, setEnglishMovies] = useState([])
   const [teluguMovies, setTeluguMovies] = useState([])
+  const [japaneseMovies, setJapaneseMovies] = useState([])
+  const [horrorMovies, setHorrorMovies] = useState([])
+  const [comedyMovies, setComedyMovies] = useState([])
+  const [romanceMovies, setRomanceMovies] = useState([])
+  const [thrillerMovies, setThrillerMovies] = useState([])
+  const [crimeMovies, setCrimeMovies] = useState([])
+  
 
   const fetchData = async () => {
     try {
@@ -31,31 +38,57 @@ function Home() {
 
       let featureMovies = data.filter(movie => { return movie.featured === true })
       console.log(featureMovies)
-      setFeaturedMovies(featureMovies.slice(0, 5))
+      setFeaturedMovies(featureMovies)
 
-      let aniMovies = data.filter(movie => {return movie.genre.includes('Animation')})
+      let aniMovies = data.filter(movie => { return movie.genre.includes('Animation') })
       console.log(aniMovies)
       setAnimeMovies(aniMovies)
 
-      let actMovies = data.filter(movie => {return movie.genre.includes('Action')})
+      let actMovies = data.filter(movie => { return movie.genre.includes('Action') })
       console.log(actMovies)
       setActionMovies(actMovies)
 
-      let topRatedMovies = data.filter(movie => {return movie.top_rated === true})
+      let topRatedMovies = data.filter(movie => { return movie.top_rated === true })
       console.log(topRatedMovies)
       setTopRatedMovies(topRatedMovies)
 
-      let telMovies = data.filter(movie => {return movie.language === 'Telugu'})
+      let telMovies = data.filter(movie => { return movie.language === 'Telugu' })
       console.log(telMovies)
       setTeluguMovies(telMovies)
 
-      let hinMovies = data.filter(movie => {return movie.language === 'Hindi'})
+      let hinMovies = data.filter(movie => { return movie.language === 'Hindi' })
       console.log(hinMovies)
       setHindiMovies(hinMovies)
 
       let engMovies = data.filter(movie => { return movie.language === 'English' })
       console.log(engMovies)
       setEnglishMovies(engMovies)
+
+      let japMovies = data.filter(movie => { return movie.language === 'Japanese' })
+      console.log(japMovies)
+      setJapaneseMovies(japMovies)
+
+      let horMovies = data.filter(movie => { return movie.genre.includes('Horror') })
+      console.log(horMovies)
+      setHorrorMovies(horMovies)  
+
+      let comMovies = data.filter(movie => { return movie.genre.includes('Comedy') })
+      console.log(comMovies)
+      setComedyMovies(comMovies)
+
+      let romMovies = data.filter(movie => { return movie.genre.includes('Romance') })
+      console.log(romMovies)
+      setRomanceMovies(romMovies)
+
+      let thrMovies = data.filter(movie => { return movie.genre.includes('Thriller') })
+      console.log(thrMovies)
+      setThrillerMovies(thrMovies)
+
+      let criMovies = data.filter(movie => { return movie.genre.includes('Crime') })
+      console.log(criMovies)
+      setCrimeMovies(criMovies)
+
+
 
     }
     catch (error) {
@@ -76,12 +109,19 @@ function Home() {
       <Featured featuredMovies={featuredMovies} />
 
       <Shows title="Anime Fever" movies={animeMovies} />
-      <Shows title="Action Movies" movies={actionMovies} />
       <Shows title="Top Rated" movies={topRatedMovies} />
       <Shows title="Telugu Movies" movies={teluguMovies} />
       <Shows title="Hindi Movies" movies={hindiMovies} />
       <Shows title="English Movies" movies={englishMovies} />
-      
+      <Shows title="Action Movies" movies={actionMovies} />
+      <Shows title="Japanese Movies" movies={japaneseMovies} />
+      <Shows title="Horror Movies" movies={horrorMovies} />
+      <Shows title="Comedy Movies" movies={comedyMovies} />
+      <Shows title="Romance Movies" movies={romanceMovies} />
+      <Shows title="Thriller Movies" movies={thrillerMovies} />
+      <Shows title="Crime Movies" movies={crimeMovies} />
+
+
 
 
 

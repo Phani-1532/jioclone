@@ -1,18 +1,26 @@
-.featured{
+.featured {
     width: 100%;
     background-color: #060707;
     padding: 10px 2%;
-
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.featured-title{
+.featured::-webkit-scrollbar {
+    display: none;
+}
+
+.featured-title {
     font-size: 30px;
+
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.showsFeatured{
-    width: 100%;
+.showsFeatured {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px 0;
+    width: max-content;
 }
-

@@ -1,26 +1,24 @@
-.featuredShow{
-    width: 22%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.featuredShow {
+    flex: 0 0 auto;
+    width: 310px;
+    height: 370px;
     position: relative;
-
+    overflow: hidden;
+    display: flex;
 }
 
-.featuredShow img{
-    width: 100%;
-    height: 400px;
+.featuredShow img {
+    width: 90%;
+    height: 370px;
+    object-fit: cover;
     border-radius: 10px;
     position: absolute;
 }
 
-
-.movieTitle{
+.movieTitle {
     width: 100%;
-    height: 100px;
-    background-color: rgba(6, 7, 7, .5) ;
+    height: 66px;
+    background-color: rgba(6, 7, 7, .5);
     position: absolute;
     align-self: flex-end;
     padding: 10px;
@@ -29,8 +27,7 @@
     transition: all 0.3s ease;
 }
 
-.movieTitle:hover{
-    background-color: rgba(6, 7, 7, 0.5) ;
-    height: 250px;
+.movieTitle:hover {
+    background-color: rgba(6, 7, 7, 0.5);
+    height: 150px;
 }
- 

@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .channel img{
