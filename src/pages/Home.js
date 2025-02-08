@@ -31,7 +31,7 @@ function Home() {
 
       let featureMovies = data.filter(movie => { return movie.featured === true })
       console.log(featureMovies)
-      setFeaturedMovies(featureMovies)
+      setFeaturedMovies(featureMovies.slice(0, 5))
 
       let aniMovies = data.filter(movie => {return movie.genre.includes('Animation')})
       console.log(aniMovies)
@@ -48,7 +48,6 @@ function Home() {
       let telMovies = data.filter(movie => {return movie.language === 'Telugu'})
       console.log(telMovies)
       setTeluguMovies(telMovies)
-
 
       let hinMovies = data.filter(movie => {return movie.language === 'Hindi'})
       console.log(hinMovies)
@@ -74,14 +73,14 @@ function Home() {
       <Tags />
       <Carousel />
       <Channel />
-      <Featured />
-      <Shows title="Featured Movies" featureMovies={featuredMovies} />
-      <Shows title="Anime Fever" animeMovies={animeMovies} />
-      <Shows title="Action Movies" actionMovies={actionMovies} />
-      <Shows title="Top Rated" topRatedMovies={topRatedMovies} />
-      <Shows title="Telugu Movies" teluguMovies={teluguMovies} />
-      <Shows title="Hindi Movies" hindiMovies={hindiMovies} />
-      <Shows title="English Movies" englishMovies={englishMovies} />
+      <Featured featuredMovies={featuredMovies} />
+
+      <Shows title="Anime Fever" movies={animeMovies} />
+      <Shows title="Action Movies" movies={actionMovies} />
+      <Shows title="Top Rated" movies={topRatedMovies} />
+      <Shows title="Telugu Movies" movies={teluguMovies} />
+      <Shows title="Hindi Movies" movies={hindiMovies} />
+      <Shows title="English Movies" movies={englishMovies} />
       
 
 

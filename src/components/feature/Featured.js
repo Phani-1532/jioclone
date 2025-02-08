@@ -1,16 +1,16 @@
 import React from 'react'
 import './Featured.css'
 import FeaturedShow from '../FeaturedShow/FeaturedShow'
-function Featured() {
+function Featured({featuredMovies}) {
     return (
         <>
             <section className='featured'>
                 <h1 className='featured-title'>Hot Right Now 🔥 </h1>
                 <div className = 'showsFeatured'>
-                   <FeaturedShow />
-                   <FeaturedShow /> {/* we are getting it from featuredShow.js */}
-                   <FeaturedShow />
-                   <FeaturedShow />
+                   
+                   {featuredMovies.map((movie, index) => {
+                    return <FeaturedShow key={index} movie={movie} />
+                   })}
                 </div>
             </section>
         </>
