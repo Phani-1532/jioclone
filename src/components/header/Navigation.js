@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navigation.css'
 import profile from '../../assets/download.png'
+import Show from '../show/Show'
 
-function Navigation() {
+function Navigation({movies}) {
+
+    const [searchInput, setSearchInput] = useState('')
+    const [filteredMovies, setFilteredMovies] = useState([])
+ 
+
+    useEffect(() => {
+       if(searchInput !== ''){
+        let filteredMovies = movies.filter((movie) => {
+            return movie.title.toUpperCase().includes(searchInput.toUpperCase())
+        })
+        setFilteredMovies(filteredMovies)
+        console.log(filteredMovies)
+       }else{
+        setFilteredMovies([])
+       }
+
+    }, [searchInput])
+
+
     let navLinks = ['Home', 'Sports', 'Movies', 'Tv Shows', 'More']
     return (
         <>
@@ -28,7 +48,7 @@ function Navigation() {
                         <div className='searchIcon'>
                             <i className='fa-solid fa-magnifying-glass'></i>
                         </div>
-                        <input type="text" placeholder='Movies, Shows and more' className='searchInput' />
+                        <input value={searchInput} onChange={(e) => {setSearchInput(e.target.value)}} type="text" placeholder='Movies, Shows and more' className='searchInput' />
                         <div className='micIcon'>
                             <i className='fa-solid fa-microphone'></i>
                         </div>
@@ -38,6 +58,14 @@ function Navigation() {
                     </div>
                 </div>
             </header>
+
+            {filteredMovies.length > 0 ?  <div className='filteredMovies'>
+                {filteredMovies.map(movie => {
+                    return <Show key={movie.id} movie={movie} />
+                     })}
+            </div> : null} 
+
+
 
         </>
     )

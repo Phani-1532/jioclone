@@ -6,7 +6,10 @@
     justify-content: space-between;
     padding: 0px 50px;
     border: 1px solid #2c2c2c;
+    position: fixed;
+    z-index: 30;
 } 
+
 
 /* Navigation Section Css */
 
@@ -172,3 +175,26 @@
 .profile i{
     font-size: 20px;
 }
+
+.filteredMovies{
+    width: 100%;
+    height: 100vh;
+    background-color: #060707;
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.filteredMovies::-webkit-scrollbar{
+    display: none;
+}
+
+

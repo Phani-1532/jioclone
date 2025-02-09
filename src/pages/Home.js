@@ -102,7 +102,7 @@ function Home() {
 
   return (
     <>
-      <Navigation />
+      <Navigation movies={movies} />
       <Tags />
       <Carousel />
       <Channel />
