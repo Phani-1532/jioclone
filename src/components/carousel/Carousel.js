@@ -21,39 +21,45 @@ function Carousel() {
       text: "Some representative placeholder content for the third slide."
     },
     {
-      image: "https://wallpapercat.com/w/full/2/6/2/1381705-3840x2160-desktop-4k-movie-poster-wallpaper-photo.jpg",
-      title: "First slide label",
+      image: "https://wallpaperaccess.com/full/3231246.png",
+      title: "Fourth slide label",
       text: "Some representative placeholder content for the first slide."
+
     },
     {
-      image: "https://wallpaperaccess.com/full/1331390.jpg",
-      title: "Second slide label",
+      image: "https://wallpaperaccess.com/full/888128.jpg",
+      title: "Fifth slide label",
       text: "Some representative placeholder content for the second slide."
     },
     {
-      image: "https://wallpaperaccess.com/full/12060590.jpg",
-      title: "Third slide label",
+      image: "https://wallpaperaccess.com/full/1087419.jpg",
+      title: "Sixth slide label",
       text: "Some representative placeholder content for the third slide."
+
     },
     {
-      image: "https://wallpapercat.com/w/full/2/6/2/1381705-3840x2160-desktop-4k-movie-poster-wallpaper-photo.jpg",
-      title: "First slide label",
+      image: "https://wallpaperaccess.com/full/314747.png",
+      title: "Seventh slide label",
       text: "Some representative placeholder content for the first slide."
+
     },
     {
-      image: "https://wallpaperaccess.com/full/1331390.jpg",
-      title: "Second slide label",
+      image: "https://4kwallpapers.com/images/wallpapers/pushpa-2-the-rule-5120x2880-17953.jpg",
+      title: "Eighth slide label",
       text: "Some representative placeholder content for the second slide."
+
     },
     {
-      image: "https://wallpaperaccess.com/full/12060590.jpg",
-      title: "Third slide label",
+      image: "https://wallpaperaccess.com/full/5571669.jpg",
+      title: "Ninth slide label",
       text: "Some representative placeholder content for the third slide."
+
     },
     {
-      image: "https://wallpaperaccess.com/full/1331390.jpg",
-      title: "Second slide label",
+      image: "https://wallpaperaccess.com/full/7282714.jpg",
+      title: "Tenth slide label",
       text: "Some representative placeholder content for the second slide."
+
     }
   ];
 
