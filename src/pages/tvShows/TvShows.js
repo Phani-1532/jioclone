@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navigation from '../../components/header/Navigation'
 import Shows from '../../components/shows/Shows'
+import './TvShows.css'
 
 
 function TvShows() {
@@ -35,7 +36,9 @@ function TvShows() {
   return (
     <>
       <Navigation movies={movies} />
-      <Shows title="Tv Shows" movies={tvShows} />
+      <div className='content1'>
+        <Shows title="Tv Shows" movies={tvShows} />
+      </div>
     </>
 
 

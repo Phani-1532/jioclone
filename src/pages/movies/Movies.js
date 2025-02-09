@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Movies.css'
+import styles from './Movies.module.css'
 import Navigation from '../../components/header/Navigation'
 import Featured from '../../components/feature/Featured'
 import Shows from '../../components/shows/Shows'
@@ -101,9 +101,10 @@ function Movies() {
   return (
     <>
       <Navigation movies={movies} />
-      <Featured featuredMovies={featuredMovies} />
-
+      <div className={styles.content2}>
       <Shows title="Anime Fever" movies={animeMovies} />
+      </div>
+  
       <Shows title="Top Rated" movies={topRatedMovies} />
       <Shows title="Telugu Movies" movies={teluguMovies} />
       <Shows title="Hindi Movies" movies={hindiMovies} />

@@ -9,7 +9,7 @@ function Sports() {
   const [movies, setMovies] = useState([])
 
   //filtering the movies
-  
+
   const [sports, setSports] = useState([])
 
 
@@ -37,9 +37,10 @@ function Sports() {
   return (
     <>
       <Navigation movies={movies} />
-      <div className = {styles.content}>
-      <Shows title="Sports" movies={sports} />
+      <div className={styles.content}>
+        <Shows title="Sports" movies={sports} />
       </div>
+
     </>
   )
 }
