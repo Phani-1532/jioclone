@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './Navigation.css'
 import profile from '../../assets/download.png'
 import Show from '../show/Show'
+import { Link } from 'react-router-dom'
 
 function Navigation({ movies }) {
 
     const [searchInput, setSearchInput] = useState('')
     const [filteredMovies, setFilteredMovies] = useState([])
-
 
     useEffect(() => {
         if (searchInput !== '') {
@@ -38,7 +38,7 @@ function Navigation({ movies }) {
                     <div >
                         <ul className="navLinks">
                             {navLinks.map((link) => {
-                                return <li className='navLink'>{link}</li>
+                                return <Link to = {`/${link}`}  className='navLink'>{link}</Link>
                             })}
                         </ul>
 
@@ -65,7 +65,6 @@ function Navigation({ movies }) {
                     return <Show key={movie.id} movie={movie} />
                 })}
             </div> : null}
-
 
 
         </>

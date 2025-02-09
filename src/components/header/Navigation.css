@@ -80,7 +80,10 @@
     padding: 21px 0px;
     font-size: 17px;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
+
 
 
 .navLink:first-child {
@@ -192,7 +195,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 30px;
+    padding: 170px 20px;
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;

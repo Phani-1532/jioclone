@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import './Home.css'
-import Navigation from '../components/header/Navigation'
-import Tags from '../components/tags/Tags'
-import Channel from '../components/channels/Channel'
-import Carousel from '../components/carousel/Carousel'
-import Featured from '../components/feature/Featured'
-import Shows from '../components/shows/Shows'
+import './Movies.css'
+import Navigation from '../../components/header/Navigation'
+import Featured from '../../components/feature/Featured'
+import Shows from '../../components/shows/Shows'
 
-function Home() {
+function Movies() {
 
   const [movies, setMovies] = useState([])
+
 
   //filtering the movies
 
@@ -26,7 +24,7 @@ function Home() {
   const [romanceMovies, setRomanceMovies] = useState([])
   const [thrillerMovies, setThrillerMovies] = useState([])
   const [crimeMovies, setCrimeMovies] = useState([])
-  
+
 
   const fetchData = async () => {
     try {
@@ -70,7 +68,7 @@ function Home() {
 
       let horMovies = data.filter(movie => { return movie.genre.includes('Horror') })
       console.log(horMovies)
-      setHorrorMovies(horMovies)  
+      setHorrorMovies(horMovies)
 
       let comMovies = data.filter(movie => { return movie.genre.includes('Comedy') })
       console.log(comMovies)
@@ -103,9 +101,6 @@ function Home() {
   return (
     <>
       <Navigation movies={movies} />
-      <Tags />
-      <Carousel />
-      <Channel />
       <Featured featuredMovies={featuredMovies} />
 
       <Shows title="Anime Fever" movies={animeMovies} />
@@ -120,16 +115,10 @@ function Home() {
       <Shows title="Romance Movies" movies={romanceMovies} />
       <Shows title="Thriller Movies" movies={thrillerMovies} />
       <Shows title="Crime Movies" movies={crimeMovies} />
-
-
-
-
-
-
     </>
 
 
   )
 }
 
-export default Home
+export default Movies

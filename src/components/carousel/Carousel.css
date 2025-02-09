@@ -30,6 +30,20 @@
     border-radius: 8px;
 }
 
+.carousel-caption h5 {
+    color: white;
+    font-size: 25px;
+    font-weight: 650;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
 .mantine-Carousel-indicators {
     bottom: 1rem;
 }
