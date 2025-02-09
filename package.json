@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@mantine/carousel": "^7.16.3",
+    "@mantine/core": "^7.16.3",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,6 +1,6 @@
 .channel{
     width: 100%;
-    padding: 30px 2%;
+    padding: 100px 2%;
     background-color: #060707;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,6 @@
     width: 100px;
     height: 100px;
     object-fit: cover;
-    background-color: #fff;
     border-radius: 5px;
 }
 
