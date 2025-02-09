@@ -16,10 +16,12 @@ function Channel() {
   return (
     <>
         <div className="channel">
+            <h1>Channels</h1>
+            <div className="channel-list">
             {channels.map((item, index) => {
                 return <img src={item} alt="" key={index} />
             })}
-
+            </div>
         </div>
     </>
   )

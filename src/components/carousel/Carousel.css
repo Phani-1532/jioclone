@@ -3,13 +3,13 @@
     height: 550px;
     background-color: #060707;
     position: relative;
-    padding: 10px 40px;
+    padding: 80px 40px;
     z-index: 10;
 }
 
 .carousel-item {
     position: relative;
-    height: 550px;
+    height: 530px;
     transition: transform 1.5s ease-in-out, opacity 1.2s ease-in-out;
 }
 
@@ -45,7 +45,7 @@
     }
 
     to {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 }
 

@@ -3,22 +3,22 @@ import './Navigation.css'
 import profile from '../../assets/download.png'
 import Show from '../show/Show'
 
-function Navigation({movies}) {
+function Navigation({ movies }) {
 
     const [searchInput, setSearchInput] = useState('')
     const [filteredMovies, setFilteredMovies] = useState([])
- 
+
 
     useEffect(() => {
-       if(searchInput !== ''){
-        let filteredMovies = movies.filter((movie) => {
-            return movie.title.toUpperCase().includes(searchInput.toUpperCase())
-        })
-        setFilteredMovies(filteredMovies)
-        console.log(filteredMovies)
-       }else{
-        setFilteredMovies([])
-       }
+        if (searchInput !== '') {
+            let filteredMovies = movies.filter((movie) => {
+                return movie.title.toUpperCase().includes(searchInput.toUpperCase())
+            })
+            setFilteredMovies(filteredMovies)
+            console.log(filteredMovies)
+        } else {
+            setFilteredMovies([])
+        }
 
     }, [searchInput])
 
@@ -31,7 +31,8 @@ function Navigation({movies}) {
                     <div className='logo'>
                         <img src={profile} alt="jio logo" /><h1>JioCinema</h1>
                         <div className="premium">
-                        <i class="fa-solid fa-crown"></i><p>Go Premium</p>
+                            <i className="fas fa-crown" style={{ color: '#d4be42' }}></i>
+                            <span>Go Premium</span>
                         </div>
                     </div>
                     <div >
@@ -48,7 +49,7 @@ function Navigation({movies}) {
                         <div className='searchIcon'>
                             <i className='fa-solid fa-magnifying-glass'></i>
                         </div>
-                        <input value={searchInput} onChange={(e) => {setSearchInput(e.target.value)}} type="text" placeholder='Movies, Shows and more' className='searchInput' />
+                        <input value={searchInput} onChange={(e) => { setSearchInput(e.target.value) }} type="text" placeholder='Movies, Shows and more' className='searchInput' />
                         <div className='micIcon'>
                             <i className='fa-solid fa-microphone'></i>
                         </div>
@@ -59,11 +60,11 @@ function Navigation({movies}) {
                 </div>
             </header>
 
-            {filteredMovies.length > 0 ?  <div className='filteredMovies'>
+            {filteredMovies.length > 0 ? <div className='filteredMovies'>
                 {filteredMovies.map(movie => {
                     return <Show key={movie.id} movie={movie} />
-                     })}
-            </div> : null} 
+                })}
+            </div> : null}
 
 
 

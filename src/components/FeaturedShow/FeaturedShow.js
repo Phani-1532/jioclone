@@ -1,6 +1,5 @@
 import React from 'react'
 import './FeaturedShow.css'
-import featured1 from '../../assets/featured1.jpeg'
 
 function FeaturedShow({movie}) {
     return (

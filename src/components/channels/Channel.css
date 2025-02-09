@@ -1,8 +1,20 @@
-.channel{
+.channel {
     width: 100%;
-    padding: 100px 2%;
+    padding:45px 2%;
     background-color: #060707;
+}
+
+.channel h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.channel-list {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     gap: 10px;
     overflow-x: auto;
@@ -10,7 +22,7 @@
     -ms-overflow-style: none;
 }
 
-.channel img{
+.channel img {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -18,7 +30,7 @@
 }
 
 
-.channel img:hover{
+.channel img:hover {
     transform: scale(1.1);
     transition: .3s;
 }
