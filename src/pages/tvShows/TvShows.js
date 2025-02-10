@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Navigation from '../../components/header/Navigation'
 import Shows from '../../components/shows/Shows'
 import './TvShows.css'
-
+import Carousel from '../../components/carousel/Carousel'
+import Tags from '../../components/tags/Tags'
 
 function TvShows() {
 
@@ -36,9 +37,12 @@ function TvShows() {
   return (
     <>
       <Navigation movies={movies} />
+      <Tags />
+      <Carousel />
       <div className='content1'>
         <Shows title="Tv Shows" movies={tvShows} />
       </div>
+
     </>
 
 

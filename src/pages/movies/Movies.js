@@ -3,6 +3,8 @@ import styles from './Movies.module.css'
 import Navigation from '../../components/header/Navigation'
 import Featured from '../../components/feature/Featured'
 import Shows from '../../components/shows/Shows'
+import Carousel from '../../components/carousel/Carousel'
+import Tags from '../../components/tags/Tags'
 
 function Movies() {
 
@@ -101,6 +103,9 @@ function Movies() {
   return (
     <>
       <Navigation movies={movies} />
+      <Tags />
+      <Carousel />
+
       <div className={styles.content2}>
       <Shows title="Anime Fever" movies={animeMovies} />
       </div>

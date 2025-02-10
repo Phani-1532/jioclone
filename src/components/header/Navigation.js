@@ -2,12 +2,24 @@ import React, { useEffect, useState } from 'react'
 import './Navigation.css'
 import profile from '../../assets/download.png'
 import Show from '../show/Show'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Navigation({ movies }) {
 
     const [searchInput, setSearchInput] = useState('')
     const [filteredMovies, setFilteredMovies] = useState([])
+    const location = useLocation()
+
+    const getActiveLink = () => {
+        const path = location.pathname.split('/')[1]
+        return path.charAt(0).toUpperCase() + path.slice(1).toLowerCase() || 'Home'
+    }
+
+    const [activeLink, setActiveLink] = useState(getActiveLink())
+
+    useEffect(() => {
+        setActiveLink(getActiveLink())
+    }, [location])
 
     useEffect(() => {
         if (searchInput !== '') {
@@ -20,10 +32,10 @@ function Navigation({ movies }) {
             setFilteredMovies([])
         }
 
-    }, [searchInput])
+    }, [searchInput, movies])
 
 
-    let navLinks = ['Home', 'Sports', 'Movies', 'Tv Shows', 'More']
+    let navLinks = ['Home', 'Sports', 'Movies', 'Tv', 'More']
     return (
         <>
             <header className='header'>
@@ -38,7 +50,15 @@ function Navigation({ movies }) {
                     <div >
                         <ul className="navLinks">
                             {navLinks.map((link) => {
-                                return <Link to = {`/${link}`}  className='navLink'>{link}</Link>
+                                return <li key={link}>
+                                    <Link
+                                        to={`/${link}`}
+                                        className={`navLink ${activeLink === link ? 'active' : ''}`}
+                                        onClick={() => setActiveLink(link)}
+                                    >
+                                        {link}
+                                    </Link>
+                                </li>
                             })}
                         </ul>
 

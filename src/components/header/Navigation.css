@@ -74,20 +74,37 @@
     align-items: center;
     list-style-type: none;
     font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 21px 0px;
 }
 
 .navLink {
-    padding: 21px 0px;
-    font-size: 17px;
-    cursor: pointer;
     text-decoration: none;
     color: white;
+    padding: 10px;
+    position: relative;
 }
 
+.navLink.active {
+    color: #d9008d;
+}
 
+/* Create a pseudo-element for the bottom border */
+.navLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -18px;
+    height: 4px;
+    background-color: #d9008d;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-out;
+}
 
-.navLink:first-child {
-    border-bottom: 4px solid #d9008d;
+.navLink.active::after {
+    transform: scaleX(1);
 }
 
 /* Search Box Section Css */
