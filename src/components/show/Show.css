@@ -28,6 +28,62 @@
 
 .movieTitle:hover{
     background-color: rgba(6, 7, 7, 0.5) ;
-    height: 150px;
+    height: 200px;
 }
+
+.movieTitle p:nth-child(1){
+
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.movieTitle p:nth-child(2){
+    font-weight: 400;
+    font-size: 16px;
+    padding-top: 0px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttons button{
+    background-color:#e3147f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.buttons button a{
+
+    text-decoration: none;
+    color: #fff;
+}
+
+.buttons button:hover{
+    background-color: #e04f9a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
  

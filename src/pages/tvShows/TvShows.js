@@ -54,8 +54,6 @@ function TvShows() {
       console.log(error)
     }
 
-
-
   }
 
   useEffect(() => {

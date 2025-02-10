@@ -107,20 +107,20 @@ function Movies() {
       <Carousel />
 
       <div className={styles.content2}>
-      <Shows title="Anime Fever" movies={animeMovies} />
+        <Shows title="Anime Fever" movies={animeMovies} />
+
+        <Shows title="Top Rated" movies={topRatedMovies} />
+        <Shows title="Telugu Movies" movies={teluguMovies} />
+        <Shows title="Hindi Movies" movies={hindiMovies} />
+        <Shows title="English Movies" movies={englishMovies} />
+        <Shows title="Action Movies" movies={actionMovies} />
+        <Shows title="Japanese Movies" movies={japaneseMovies} />
+        <Shows title="Horror Movies" movies={horrorMovies} />
+        <Shows title="Comedy Movies" movies={comedyMovies} />
+        <Shows title="Romance Movies" movies={romanceMovies} />
+        <Shows title="Thriller Movies" movies={thrillerMovies} />
+        <Shows title="Crime Movies" movies={crimeMovies} />
       </div>
-  
-      <Shows title="Top Rated" movies={topRatedMovies} />
-      <Shows title="Telugu Movies" movies={teluguMovies} />
-      <Shows title="Hindi Movies" movies={hindiMovies} />
-      <Shows title="English Movies" movies={englishMovies} />
-      <Shows title="Action Movies" movies={actionMovies} />
-      <Shows title="Japanese Movies" movies={japaneseMovies} />
-      <Shows title="Horror Movies" movies={horrorMovies} />
-      <Shows title="Comedy Movies" movies={comedyMovies} />
-      <Shows title="Romance Movies" movies={romanceMovies} />
-      <Shows title="Thriller Movies" movies={thrillerMovies} />
-      <Shows title="Crime Movies" movies={crimeMovies} />
     </>
 
 
