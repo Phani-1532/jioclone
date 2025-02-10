@@ -50,8 +50,7 @@ function Sports() {
       let bhuvi = data.filter(movie => { return movie.bhuneswar === true })
       console.log(bhuvi)
       setBhuvi(bhuvi.slice(0, 20))
-
-
+      
     }
     catch (error) {
       console.log(error)
