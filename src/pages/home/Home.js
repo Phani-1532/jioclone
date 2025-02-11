@@ -99,7 +99,6 @@ function Home() {
       setSports(sports)
 
 
-
     }
     catch (error) {
       console.log(error)
@@ -113,7 +112,7 @@ function Home() {
   return (
     <>
       <Navigation movies={movies} />
-      <Tags />
+      <Tags movies = {movies} />
       <Carousel />
       <Channel />
       <Featured featuredMovies={featuredMovies} />

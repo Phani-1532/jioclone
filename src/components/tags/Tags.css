@@ -29,3 +29,55 @@
 .tag:hover {
     background-color: #888585;
 }
+
+.tags-display {
+    width: 100%;
+    height: 100vh;
+    background-color: #060707;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    padding: 70px 1px;
+    margin-top: 20px;
+}
+
+.tags-display button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d9008d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tags-display button:hover {
+    background-color: #b8006b;
+}
+
+.tags-display-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;    
+}
+
+.tags-display-header h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #d9008d;
+}
+
+.tags-display-header button {
+    background-color: #d9008d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
