@@ -75,7 +75,7 @@ function Navigation({ movies }) {
                         </div>
                     </div>
                     <div className='profile'>
-                        <i className='fa-solid fa-user'></i>
+                        <Link to='/login'><i className='fa-solid fa-user'></i></Link>
                     </div>
                 </div>
             </header>

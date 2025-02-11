@@ -199,7 +199,10 @@
 
 .profile i {
     font-size: 20px;
+    color: white;
 }
+
+
 
 .filteredMovies {
     width: 100%;
