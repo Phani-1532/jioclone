@@ -30,7 +30,7 @@ function TvShows() {
       console.log(tvShows)
       setTvShows(tvShows.slice(0, 20))
 
-      let tvShows2 = data.filter(movie => { return movie.genre.includes('TV Series', 'Drama') })
+      let tvShows2 = data.filter(movie => { return movie.genre.includes('Drama') })
       console.log(tvShows2)
       setTvShows2(tvShows2.slice(20, 40))
 
